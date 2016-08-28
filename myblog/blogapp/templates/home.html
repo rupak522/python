@@ -1,0 +1,18 @@
+
+{% extends 'base.html' %}
+{% block content %}
+
+<em><h1>welcome</h1></em>
+{% for blog in blogs %}
+{% if blog.publish %}
+
+<h3 class="blur">this is just a try</h3>
+<h1><a href=" {% url 'details' pk=blog.pk %}">{{ blog.title }}</a></h1>
+
+<p>{{ blog.content}}</p>
+<p>{{ blog.created}}</p></br>
+{% endif %}
+{% endfor %}
+{% endblock content %}
+</body>
+</html>
